@@ -301,6 +301,7 @@ class MAEBackbone(vision_transformer.VisionTransformer):
             Tensor with shape (batch_size, sequence_length - 1, hidden_dim)
             containing the patch tokens.
         """
+        print(images.size())
         x = self.conv_proj(images)
         print('x, 'x.size())
         tokens = x.flatten(2).transpose(1, 2)
