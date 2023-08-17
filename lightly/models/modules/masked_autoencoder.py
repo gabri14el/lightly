@@ -285,6 +285,7 @@ class MAEBackbone(vision_transformer.VisionTransformer):
             containing the encoded class and patch tokens for every image.
 
         """
+        print(images.size(), idx_keep.size())
         out = self.images_to_tokens(images, prepend_class_token=True)
         return self.encoder(out, idx_keep)
 
