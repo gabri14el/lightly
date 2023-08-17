@@ -303,7 +303,7 @@ class MAEBackbone(vision_transformer.VisionTransformer):
         """
         print(images.size())
         x = self.conv_proj(images)
-        print('x, 'x.size())
+        print('x,', x.size())
         tokens = x.flatten(2).transpose(1, 2)
         if prepend_class_token:
             print('tokens, 'tokens.size(),'class_token, ' , self.class_token.size())
